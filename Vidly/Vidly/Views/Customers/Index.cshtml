@@ -7,7 +7,29 @@
 
 <h1>Customers</h1>
 
-@foreach (var customer in Model.Customers)
+
+@if (Model.Customers.Count < 1)
 {
-    <p>@customer.Name</p>
+    <p class="alert alert-warning">There are no customers to display.</p>
 }
+else
+{
+  
+    <div class="card mb-3">
+        <h5 class="card-header"><strong>@(Model.Customers.Count == 1 ? "Customer" : "Customers" )</strong></h5>
+        <ul class="list-group list-group-flush">
+
+            @foreach (var customer in Model.Customers)
+            {
+                <li class="list-group-item">
+                    @Html.ActionLink(customer.Name,"Details","Customers",new {id=customer.Id},new {@class="card-link"})
+                    @*<a href="Customers/Details/@customer.Id" class="card-link">@customer.Name</a>*@
+                </li>
+
+            }
+        </ul>
+    </div>
+    
+
+}
+
