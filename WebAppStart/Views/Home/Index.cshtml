@@ -4,4 +4,17 @@
 }
 
 <h2>Index :)</h2>
+@helper ShowData(string[] arr)
+{
+    <ul>
+        @foreach (var item in arr)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+<h2>Newly Added Courses</h2>
+@ShowData(new string[] { "Python", "AI", "ML" })
 
+<h2>Most Popular</h2>
+@ShowData(new string[] { "MVC", "Azure", "Xamarin","AWS" })

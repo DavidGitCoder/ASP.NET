@@ -22,7 +22,7 @@ namespace WebAppStart.Controllers
             // otherwise return to the Login page/view
             if (ModelState.IsValid)
             {
-                return RedirectToAction("Dashboard", "Home");
+                return RedirectToAction("Dashboard", "Home", model);
             }
             return View(model);
         }

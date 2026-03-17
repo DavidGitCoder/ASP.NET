@@ -11,6 +11,7 @@ namespace WebAppStart.Models
         [Required(ErrorMessage = "Please Enter Username")]
         public string Username { get; set; }
         [Required(ErrorMessage = "Please Enter Password")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }

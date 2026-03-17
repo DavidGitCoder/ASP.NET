@@ -14,6 +14,20 @@
         Password:@Html.PasswordFor(m=>m.Password)
     </div>
     <div>
-        <input type="submit" name="name" value="Login"/>
+        @Html.SubmitButton("command", "Login")
+        @*<input type="submit" name="name" value="Login"/>*@
     </div>
 }
+
+@*@using (Html.BeginForm())
+{
+    <div>
+        Username:@Html.EditorFor(m=>m.Username)
+    </div>
+    <div>
+        Password:@Html.EditorFor(m=>m.Password)
+    </div>
+    <div>
+        <input type="submit" name="name" value="Login"/>
+    </div>
+}*@

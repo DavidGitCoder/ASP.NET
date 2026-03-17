@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebAppStart.Models;
 
 namespace WebAppStart.Controllers
 {
@@ -19,6 +20,11 @@ namespace WebAppStart.Controllers
         public int Add(int x, int y)
         {
             return x + y;
+        }
+
+        public ViewResult Dashboard(LoginModel login)
+        {
+            return View(login);
         }
     }
 }
